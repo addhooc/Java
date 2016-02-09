@@ -18,7 +18,7 @@ public class Lambdas {
 		List <Integer> caja1 = new ArrayList<Integer>();
 				
 		caja1 = lista1.stream()  // Iteracion de elementos
-				.filter(Lambdas::esPar) // Filtrados por un método
+				.filter(Lambdas::esPar) // Filtrados por el método booleano esPar
 				.collect(Collectors.toList()); // Coleccionados en una lista
 		
 		System.out.println("Filter --> "+ caja1.toString());
