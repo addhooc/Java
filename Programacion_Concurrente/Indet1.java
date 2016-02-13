@@ -2,7 +2,7 @@ package indeterminismo;
 
 import java.util.Random;
 
-public class Indeterminismo1 extends Thread{
+public class Indet1 extends Thread{
 	
 	private static int tamanio = 1000;
 	private static int[] arr = new int[tamanio];
@@ -10,7 +10,7 @@ public class Indeterminismo1 extends Thread{
 	// Atributos que indicarán el alcance de los hilos
 	private int start, end;
 	
-	public Indeterminismo1(int start, int end){
+	public Indet1(int start, int end){
 		this.start = start;
 		this.end = end;
 	}
@@ -37,19 +37,19 @@ public class Indeterminismo1 extends Thread{
 		
 		// Ejemplo: el hilo ind1 se encarga de una sección del vector -> 0 a 2
 		// A esta sección aplica lo indicado en el método run()
-		Indeterminismo1 ind1 = new Indeterminismo1(0, 2);
+		Indet1 ind1 = new Indet1(0, 2);
 		
-		Indeterminismo1 ind2 = new Indeterminismo1(2, 4);
+		Indet1 ind2 = new Indet1(2, 4);
 		
-		Indeterminismo1 ind3 = new Indeterminismo1(4, 6);
+		Indet1 ind3 = new Indet1(4, 6);
 		
-		Indeterminismo1 ind4 = new Indeterminismo1(6, 8);
+		Indet1 ind4 = new Indet1(6, 8);
 		
-		Indeterminismo1 ind5 = new Indeterminismo1(8, 10);
+		Indet1 ind5 = new Indet1(8, 10);
 		
 		// El hilo indFull se encarga de la sección restante
 		// de los elementos del array --> de 10 a 1000
-		Indeterminismo1 indFull = new Indeterminismo1(10, 1000);
+		Indet1 indFull = new Indet1(10, 1000);
 		
 		ind1.start();
 		ind2.start();
@@ -69,7 +69,10 @@ public class Indeterminismo1 extends Thread{
 			
 			indFull.join();
 		}
-		catch(Exception ex){}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
 		
 		
 		for (int i = 0; i < arr.length; i++) {
