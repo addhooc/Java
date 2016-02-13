@@ -1,0 +1,12 @@
+
++--------+
++ INDICE +
++--------+
+
+
+1 -- Threads1
+2 -- Threads2
+3 -- Threads3
+4 -- Indet1
+5 -- Indet2
+6 -- Dinamico
