@@ -2,7 +2,7 @@ package dinamismo;
 
 public class Runn_2 implements Runnable{
 	// Variable estática garantiza que todos los hilos puedan acceder a ella
-	private static int count = 0;
+	private static int cont = 0;
 	// Objeto para pasarle como argumento al método synchronized
 	// dentro del método run
 	private static Object obj = new Object();
@@ -10,9 +10,9 @@ public class Runn_2 implements Runnable{
 	// Se reescribe el método run
 	@Override
 	public void run(){
-		for (int i = 0; i < 100; i++) {
-			synchronized(obj){
-				count++;
+		synchronized(obj){
+			for (int i = 0; i < 100; i++) {
+				cont++;
 			}
 		}
 	}
@@ -46,7 +46,7 @@ public class Runn_2 implements Runnable{
 		
 		// Mostramos el valor de la variable luego de que todos los hilos
 		// han aplicado el método run
-		System.out.print(count);
+		System.out.print(cont);
 	}
 	
 		
