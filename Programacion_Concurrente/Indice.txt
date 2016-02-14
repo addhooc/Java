@@ -10,3 +10,5 @@
 4 -- Indet1
 5 -- Indet2
 6 -- Dinamico
+7 -- Runn
+8 -- Run_2
