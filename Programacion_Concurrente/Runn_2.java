@@ -32,15 +32,16 @@ public class Runn_2 implements Runnable{
 		// Se instancia un objeto de la Clase Thread <h> al que se le pasa como parámetro
 		// el objeto de nuestra clase <runn>.
 		// Luego, se lanzan los hilos.
-		for (Thread h : hilos) {
+		
+		for (int i = 0; i < hilos.length; i++) {
 			Runnable runn = new Runn_2();
-			h = new Thread(runn);
-			h.start();
+			hilos[i] = new Thread(runn);
+			hilos[i].start();
 		}
 		
 		try {
-			for (Thread h : hilos) {
-				h.join();
+			for (int i = 0; i < hilos.length; i++) {
+				hilos[i].join();
 			}
 		} catch (Exception e) {}
 		
