@@ -13,3 +13,5 @@
 7 -- Runn
 8 -- Run_2
 9 -- Runn_3
+10 -- Runn_Buffer
+11 -- Productor_Consumidor
