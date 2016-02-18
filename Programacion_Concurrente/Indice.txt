@@ -15,3 +15,5 @@
 9 -- Runn_3
 10 -- Runn_Buffer
 11 -- Productor_Consumidor
+11 -- Monitor
+12 -- Pool
