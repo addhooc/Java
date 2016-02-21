@@ -14,6 +14,7 @@ public class Collection_1{
 		
 		Collection<String> box = new HashSet<>();
 		
+		
 		Collection<String> books = Arrays.asList("Odisea", "Eneida", "Ilíada", "Amadís de Gaula");
 		
 		// Adding a single item in the collection
@@ -33,6 +34,34 @@ public class Collection_1{
 		//copy.forEach(System.out::println);
 		
 		box.forEach(System.out::println);
+		
+		// Remove all elements from the collection
+		box.clear();
+		
+		// Restore collection from the copy we made
+		box.addAll(copy);
+		
+		// Call toString()
+		System.out.println("from box " + box);
+		
+		// Obtain an array of collection elements.
+		// If the iterator guarantees an order, this array has the same order
+		Object[] libros = box.toArray();
+		for (Object o : libros) {
+			System.out.println("from Object[] " + o);
+		}
+		
+		// If we want the elements in a String[],
+		// we must pass one in
+		String[] nombres = box.toArray(new String[box.size()]);
+		for (String s : nombres) {
+			System.out.println("from nombres[] " + s);
+			
+		}
+		
+		
+		
+		
 //---------------------------------------------------------------------------------------------------
 		
 		Collection<Integer> sales = Arrays.asList(12000, 23000, 34000, 45000, 56000);
