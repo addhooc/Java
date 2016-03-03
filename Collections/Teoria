@@ -1,10 +1,10 @@
 						+===================+
-						+	Colecciones		+
+						+    Colecciones    +
 						+===================+
 
-Son almacenes din·micos de Objetos.
+Son almacenes din√°micos de Objetos.
 No se puede almacenar tipos de datos primarios.
-Pueden cambiar de tamaÒo din·micamente (a diferencia de los arrays)
+Pueden cambiar de tama√±o din√°micamente (a diferencia de los arrays)
 Pueden ir provistas de ordenamiento
 Se puede insertar y eliminar elementos
 
@@ -14,31 +14,31 @@ Se puede insertar y eliminar elementos
 			|											  |
 		<SORTEDSET>     								<SORTEDMAP>
 		
-Nota: Cuantas m·s funcionalidades ofrece una colecciÛn, menos eficiente ser·.
-	  Un Set permite hacer menos cosas que un List, no obstante el primero es mucho m·s eficiente. 
+Nota: Cuantas m√°s funcionalidades ofrece una colecci√≥n, menos eficiente ser√°.
+	  Un Set permite hacer menos cosas que un List, no obstante el primero es mucho m√°s eficiente. 
 		
 
 Descripciones:
 -------------
 		
-		SET: Admite objetos que no estÈn repetidos -> titulares de una cuenta corriente
-				No interesa que estÈn ordenados.
+		SET: Admite objetos que no est√©n repetidos -> titulares de una cuenta corriente
+				No interesa que est√©n ordenados.
 		
 		LIST: Admite valores repetidos.
-				Objetos que pueden estar repetidos. Est·n indexados: obj 1, obj 2, obj 3, ...
-				Ofrece acceso aleatorio: acceder al elemento por su Ìndice.
+				Objetos que pueden estar repetidos. Est√°n indexados: obj 1, obj 2, obj 3, ...
+				Ofrece acceso aleatorio: acceder al elemento por su √≠ndice.
 				
-		QUEUE: Cola. Solo se puede acceder al primero o al ˙ltimo objeto, o a ambos.
-				Seg˙n salen objetos por detr·s o delante, se van agregando objetos.
+		QUEUE: Cola. Solo se puede acceder al primero o al √∫ltimo objeto, o a ambos.
+				Seg√∫n salen objetos por detr√°s o delante, se van agregando objetos.
 				
-		MAP: Permite crear colecciÛn de elementos repetidos indexdos por clave ˙nica arbitraria.
-				Se identifica cada elemento con una clave que no tiene por quÈ ser un n˙mero.
+		MAP: Permite crear colecci√≥n de elementos repetidos indexdos por clave √∫nica arbitraria.
+				Se identifica cada elemento con una clave que no tiene por qu√© ser un n√∫mero.
 				"elem1" (un String) identidfica a obj1
 				"elem2" (un String) identifica a obj2
 				
 				
 								+===========+
-								+	LIST	+
+								+    LIST   +
 								+===========+
 								
 Collection <I>
@@ -49,25 +49,25 @@ Collection <I>
 		CopyOnWriteArrayList (C)
 
 Ventajas: 
-	Acceso aleatorio (seg˙n Ìndice)
-	Est·n ordenadas (collection.sort())
-	AÒadir / eliminar sin restricciÛn
-	ListIterator modifica la ordenaciÛn en cualquier direcciÛn.
+	Acceso aleatorio (seg√∫n √≠ndice)
+	Est√°n ordenadas (collection.sort())
+	A√±adir / eliminar sin restricci√≥n
+	ListIterator modifica la ordenaci√≥n en cualquier direcci√≥n.
 	Sintaxis similar a Arrays
 
 Desventajas:
 	Tienen un bajo rendimiento en operaciones concretas
-	que se resolverÌan con otras estructuras.
+	que se resolver√≠an con otras estructuras.
 	
 
-ARRAYLIST: Es muy r·pido el acceso a sus elementos. Por ello, si se va a leer muchas veces
+ARRAYLIST: Es muy r√°pido el acceso a sus elementos. Por ello, si se va a leer muchas veces
 			los elementos, es conveniente el uso de un ArrayList.
 
 LINKEDLIST: Gran eficiencia agregando y eliminando elementos. Pero no leyendo.
 				Por ello, si la idea es agregar o eliminar siempre muchos elementos, pero no leerlos,
 				puede ser conveniente utilizar un LinkedList.
 				
-VECTOR: Obsoleta. Se utilizaba en ProgramaciÛn Concurrente.
+VECTOR: Obsoleta. Se utilizaba en Programaci√≥n Concurrente.
 
 COPYONWRITEARRAYLIST: Utilizada en programas Concurrentes.
 						Eficiente en operaciones de lectura, pero muy poco eficiente en operaciones de 
@@ -75,60 +75,60 @@ COPYONWRITEARRAYLIST: Utilizada en programas Concurrentes.
 			
 								
 								+===============+
-								+	LinkedList  +
-								+	   vs       +
-								+	ArrayList	+
+								+   LinkedList  +
+								+      vs       +
+								+   ArrayList	+
 								+===============+
 								
-Si se implementa un ArrayList y se elimina un elemento, se est· obligado a reemplazar
+Si se implementa un ArrayList y se elimina un elemento, se est√° obligado a reemplazar
 su espacio con otro elemento. Ello obliga a mover todos los elementos.
-En cuanto a eficiencia, un ArrayList implementado en situaciones en las que contÌnuamente vamos
+En cuanto a eficiencia, un ArrayList implementado en situaciones en las que cont√≠nuamente vamos
 a eliminar elementos: es muy poco eficiente.
 
 Todo lo contrario ocurre con las listas enlazadas. Cada elemento contiene dos nodos
 que apuntan tanto al elemento anterior como al siguiente.
 Al eliminar un elemento, los nodos de los elementos anterior y posterior se enlazan,
-continuando asÌ enlazada la lista.
+continuando as√≠ enlazada la lista.
 
 En cuanto a eficiencia, una LinkedList es mucho mejor en situaciones en las que es necesario
 eliminar o actualizar elementos con gran frecuencia.
 
 Es importante destacar que los elementos que se agregan a una LinkedList se agregan, por defecto,
-siempre al final de la lista. tambiÈn es osible agregarlo en otra posiciÛn (aunque esto suele
+siempre al final de la lista. tambi√©n es osible agregarlo en otra posici√≥n (aunque esto suele
 hacerse con iteradores).
 
 Conviene destacar que para iterar una lista enlazada de manera efectiva, es coneniente
-valerse del mÈtodo | ListIterator |, el cual provee mucohos m·s mÈtodos que un Iterator.
-En definitiva un ListIterator permite recorrer la LinkedList hacia adelante, hacia atr·s,
-detenerme en un elemento, moverlo, eliminarlo, etc. En definitiva, interactuar con Èl.
+valerse del m√©todo | ListIterator |, el cual provee mucohos m√°s m√©todos que un Iterator.
+En definitiva un ListIterator permite recorrer la LinkedList hacia adelante, hacia atr√°s,
+detenerme en un elemento, moverlo, eliminarlo, etc. En definitiva, interactuar con √©l.
 
 +===============+
-+	IMPORTANTE	+
++   IMPORTANTE	+
 +===============+
 
 Un ListIterator se encuentra "fuera" de la Lista antes de recorrerla, cuando lo inicializamos.
 Por ejemplo:
 
-itCapitales = capitales.listIterator(); -> iterador inicializado. Est· fuera de la lista.
+itCapitales = capitales.listIterator(); -> iterador inicializado. Est√° fuera de la lista.
 
 
 						ITERADOR hasNext() -> true -> next() -> salta a linea entre 1 y 2
-						--------
+						------------
 						+	   +
-						+	1  +
+						+    1     +
 						+	   +
-						-------- -> hasNext() -> true -> next() -> salta a linea entre 2 y 3
+						------------ -> hasNext() -> true -> next() -> salta a linea entre 2 y 3
 						+	   +
-						+	2  +
+						+    2     +
 						+	   +
-						-------- -> next()
+						------------ -> next()
 						+	   +
-						+	3  +
+						+    3     +
 						+	   +
-						--------
+						------------
 
-Se le pide comprobar si hay un siguiente elemento. Si la lista no est· vacÌa, lo habr·.
-Al indicarle next() -> el iterador salta a la "lÌnea divisoria" entre el elemento 1 y 2.
+Se le pide comprobar si hay un siguiente elemento. Si la lista no est√° vac√≠a, lo habr√°.
+Al indicarle next() -> el iterador salta a la "l√≠nea divisoria" entre el elemento 1 y 2.
 Como ha saltado "por encima" del elemento 1, al decirle remove() lo que hace es remover el elemento que
 se ha altado -> en este caso el 1.
 
@@ -141,29 +141,29 @@ se ha altado -> en este caso el 1.
 		
 		}
 		
-Este cÛdigo remueve las posiciones pares, ya que se le indica saltar dos veces
-siempre que haya un prÛximo elemento.
+Este c√≥digo remueve las posiciones pares, ya que se le indica saltar dos veces
+siempre que haya un pr√≥ximo elemento.
 		
 		
 								+=============+
-								+	TREESET	  +
+								+   TREESET   +
 								+=============+
 								
 Luego de haber utiliizado HashSet, se ha visto que no es posible mantener los elementos ordenandos.
-Esto puede hacerse con un TreeSet. Un TreeSet es ordenado, pero, eso sÌ, es poco eficiente.
+Esto puede hacerse con un TreeSet. Un TreeSet es ordenado, pero, eso s√≠, es poco eficiente.
 
-La colecciÛn TreeSet utiliza la interfaz del tipo de objeto que almacena en su interior
-para compararlos entre sÌ y, de ese modo, ordenarlos.
-En este caso de ejemmplo tenemos un TreeSet cuyo objeto genÈrico es String. La clase String impementa
+La colecci√≥n TreeSet utiliza la interfaz del tipo de objeto que almacena en su interior
+para compararlos entre s√≠ y, de ese modo, ordenarlos.
+En este caso de ejemmplo tenemos un TreeSet cuyo objeto gen√©rico es String. La clase String impementa
 la interfaz Comparable. En la API de Java poodemos ver que la interfaz Comparable
-tiene el mÈtodo compareTo mediante el cual compara los objtos de la Clase genÈrica, en este caso String.
+tiene el m√©todo compareTo mediante el cual compara los objtos de la Clase gen√©rica, en este caso String.
 
 +=============+
 + IMPORTANTE  +
 +=============+
 
-Si creo un TreeSet cuyo par·metro genÈrico sea una clase creada por mÌ,
-es necesario implementar la interfaz Comparable en mi clase y sobreescribir el mÈtodo compareTo()
+Si creo un TreeSet cuyo par√°metro gen√©rico sea una clase creada por m√≠,
+es necesario implementar la interfaz Comparable en mi clase y sobreescribir el m√©todo compareTo()
 
 		public class MiClase impements Comparable{
 
@@ -180,11 +180,11 @@ Constructor con Comparator:
 
 Si la Clase de los objetos que guardamos dentro del TreeSet no implenta la interfaz Comparable,
 es necesario utilizar otro contructor para poder ordenar nuestro TreeSet.
-Se trata de un constructor que recibe por par·metro un Comparator.
-øQuÈ es comparator? Se trata de una Interfaz que tiene un mÈtodo llamado compare(T o1, T o2) 
--no confundir con compareTo-. AsÌ que, si no implementamos la interfaz Comparable, igualmente
-estaremos implementando la interfaz Comparator. (M·s adelante veremos cÛmo evitar estas implementaciones
-mediante la construcciÛn de una inner class o clase interna.)
+Se trata de un constructor que recibe por par√°metro un Comparator.
+¬øQu√© es comparator? Se trata de una Interfaz que tiene un m√©todo llamado compare(T o1, T o2) 
+-no confundir con compareTo-. As√≠ que, si no implementamos la interfaz Comparable, igualmente
+estaremos implementando la interfaz Comparator. (M√°s adelante veremos c√≥mo evitar estas implementaciones
+mediante la construcci√≥n de una inner class o clase interna.)
 
 compare(T o1, T o2)
 Parameters:
@@ -203,13 +203,13 @@ TreeSet(Comparator<? super E> comparator)
 + IMPORTANTE  +
 +=============+
 
-// En caso de que la Clase artÌculo ya estÈ creada y queramos hacer un comparador
-// creamos una inner class que impelemnte Comparator, cuyo tipo genÈrico ser· la clase en cuestiÛn
-// Luego de ello se instancia un objeto de ComparadorDeArticulos y se utiliza su mÈtodo compare.
+// En caso de que la Clase art√≠culo ya est√© creada y queramos hacer un comparador
+// creamos una inner class que impelemnte Comparator, cuyo tipo gen√©rico ser√° la clase en cuesti√≥n
+// Luego de ello se instancia un objeto de ComparadorDeArticulos y se utiliza su m√©todo compare.
 //
 // ComparadorDeArticulos compara_art = new ComparadorDeArticulos();
 //
-// Luego utilizamos el constructor de TreeSet que recibe como par·metro un comparador.
+// Luego utilizamos el constructor de TreeSet que recibe como par√°metro un comparador.
 //
 // TreeSet<ComparadorDeArticulos> treeComparador = new TreeSet<ComparadorDeArticulos>(compara_art);
 //
@@ -233,10 +233,10 @@ class ComparadorDeArticulos implements Comparator<Articulo>{
 A modo de step by step:
 
 1-. Crear una inner Class (o una class) que implemente Comparable
-2.- Sobreescribir el mÈtodo compare con el criterio necesario
-3.- Instanciar objeto de la inner class (por su naturaleza de interfaz, har· de comparador)
-3.- Implementar un TreeSet con su constructor que recibe como par·metro un objeto de tipo Comparable
-4.- El antes construido objeto es el par·metro pasado.
+2.- Sobreescribir el m√©todo compare con el criterio necesario
+3.- Instanciar objeto de la inner class (por su naturaleza de interfaz, har√° de comparador)
+3.- Implementar un TreeSet con su constructor que recibe como par√°metro un objeto de tipo Comparable
+4.- El antes construido objeto es el par√°metro pasado.
 
 
 +================+
@@ -244,7 +244,7 @@ A modo de step by step:
 +================+
 
 Eta es otra manera de hacerlo, con la cual nos evitamos crear otra clase.
-Utilizamos una clase anÛnima dentro del TreeSet.
+Utilizamos una clase an√≥nima dentro del TreeSet.
 
 	TreeSet<Articulo> comparadorConClaseAnonima = new TreeSet<Articulo>(new Comparator<Articulo>()){
 			public int compare(Articulo art1, Articulo art2) {
@@ -262,9 +262,9 @@ Utilizamos una clase anÛnima dentro del TreeSet.
 Esto sustituye a:
 
 -- Crear una clase interna que implemente Comparator.
--- sobreerscribir allÌ el mÈtodo compare.
+-- sobreerscribir all√≠ el m√©todo compare.
 -- Instanciar un objeto de dicha clase.
--- Luego crear un TreeSet con constructor que recibe un Comparador como par·metro.
+-- Luego crear un TreeSet con constructor que recibe un Comparador como par√°metro.
 
 
 
